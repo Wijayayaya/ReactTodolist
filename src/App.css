@@ -1,0 +1,197 @@
+/* General Task List styling */
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Card styling */
+.task-card {
+  border-radius: 12px;
+  border: none;
+  padding: 15px 20px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+  background-color: #ffffff;
+}
+
+/* Card body styling */
+.task-card-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Batasi lebar task-name dan tambahkan ellipsis untuk teks yang panjang */
+.task-name {
+  font-weight: 500;
+  font-size: 1rem;
+  color: #111827;
+  max-width: 200px; /* Batasi lebar sesuai kebutuhan */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Pastikan elemen-elemen lain memiliki lebar yang sesuai */
+.task-details, .task-priority, .task-status, .task-complete {
+  flex: 1;
+  min-width: 0; /* Tambahkan ini untuk memastikan elemen tidak melampaui batas */
+}
+
+.task-label {
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+
+.task-name {
+  font-weight: 500;
+  font-size: 1rem;
+  color: #111827;
+}
+
+/* Priority colors */
+.priority-high {
+  color: #e63946;
+  font-weight: bold;
+}
+
+.priority-medium {
+  color: #f4a261;
+  font-weight: bold;
+}
+
+.priority-low {
+  color: #2a9d8f;
+  font-weight: bold;
+}
+
+/* Status badges */
+.status-badge {
+  background-color: #f1f5f9;
+  color: #64748b;
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.status-badge.to-do {
+  background-color: #e2e8f0;
+  color: #64748b;
+}
+
+.status-badge.in-progress {
+  background-color: #dbeafe;
+  color: #2563eb;
+}
+
+.status-badge.done {
+  background-color: #d1fae5;
+  color: #10b981;
+}
+
+/* Icon button styling */
+.icon-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.edit-icon, .delete-icon {
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.edit-icon {
+  color: #4f46e5;
+  transition: color 0.2s ease;
+}
+
+.edit-icon:hover {
+  color: #3730a3;
+}
+
+.delete-icon {
+  color: #e63946;
+  transition: color 0.2s ease;
+}
+
+.delete-icon:hover {
+  color: #c53030;
+}
+
+/* Add Task button styling */
+button.btn-primary {
+  background-color: #6f42c1;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+button.btn-primary:hover {
+  background-color: #5a31a6;
+}
+
+/* src/App.css */
+
+body {
+  background-color: #f8f9fa;
+}
+
+.task-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.search-input,
+.filter-select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+}
+
+.status-badge.to-do {
+  background-color: #e2e8f0;
+  color: #64748b;
+}
+
+.status-badge.in-progress {
+  background-color: #dbeafe;
+  color: #2563eb;
+}
+
+.status-badge.done {
+  background-color: #d1fae5;
+  color: #10b981;
+}
+
+.icon-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.add-task-btn {
+  margin-bottom: 15px;
+}
+
+.task-complete {
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+/* Add transition effect for status icons */
+.task-complete svg {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.task-complete svg:hover {
+  transform: scale(1.2);
+  color: #4f46e5;
+}
